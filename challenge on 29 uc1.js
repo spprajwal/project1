@@ -1,10 +1,12 @@
-import { LightningElement,track } from 'lwc';
+<template>
 
-export default class CardAndText extends LightningElement {
-
-    @track titlename;
-    reflectTheText(event){
-      this.titlename = this.template.querySelector('lightning-input').value;
-    }
-
-}
+    <lightning-card  title={titlename} icon-name="standard:asset_action">
+   
+        <div class="slds-p-around_medium lgc-bg">
+        <lightning-input type="text" label="Enter Name" onchange={reflectTheText}></lightning-input>
+       </div>
+   
+    </lightning-card>
+    
+    
+</template>
